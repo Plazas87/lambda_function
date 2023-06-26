@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "donjayamanne.git-extension-pack",
+        "donjayamanne.python-extension-pack",
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.vscodeintellicode-completions",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+    ]
+}
