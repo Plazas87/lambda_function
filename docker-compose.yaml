@@ -2,10 +2,25 @@
 version: '3.1'
 
 services:
+  lambda:
+    container_name: galeo
+    image: galeo-lambda
+    ports:
+      - 9000:8080
+    env_file:
+      - .env
+    volumes:
+      - ./src:/var/task
+
 
   mongo:
     image: mongodb/mongodb-community-server:6.0-ubi8
     container_name: mongodb
+    ports:
+      - "27017:27017"
     environment:
-      - MONGODB_INITDB_ROOT_USERNAME=user
-      - MONGODB_INITDB_ROOT_PASSWORD=pass
+      - MONGODB_INITDB_ROOT_USERNAME=${MONGO_USER}
+      - MONGODB_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
+
+
+
