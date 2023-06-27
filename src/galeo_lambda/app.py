@@ -47,9 +47,12 @@ def lambda_handler(event: Dict[str, Any], context: Any):
         return response
 
     logger.info("Request validation completed.")
+    print(data)
     
     # process the data
+    logger.info("Start processing the data...")
     try:
+        print(data)
         processed_data = data_processor.process(data=data)
 
     except Exception as err:
@@ -61,10 +64,14 @@ def lambda_handler(event: Dict[str, Any], context: Any):
         )
         return response
 
+    logger.info("Data processing completed!")
     
     # load the data
+    logger.info("Start processing saving the data...")
     try:
-        data_loader.load(data=processed_data)
+        with data_loader:
+            for obj in processed_data:
+                data_loader.load(obj=obj)
 
     except Exception as err:
         response.update(
@@ -75,11 +82,11 @@ def lambda_handler(event: Dict[str, Any], context: Any):
         )
         return response
 
-    
+    logger.info("Data has been successfully processed and saved!")
+
     response.update(
         {
             "body": "Data has been successfully processed and saved."
         }
     )
-
     return response

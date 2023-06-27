@@ -10,7 +10,7 @@ data_loaders_class_map: Dict[StorageType, Type[DataLoader[str, Any]]] = {
     StorageType.DOCUMENT_DB: DocumentDBDataLoader
 }
 
-def data_loader_factory(storage_name: str) -> DataLoader:
+def data_loader_selector(storage_name: str) -> Type[DataLoader[str, Any]]:
     """Build and return a dataloader instance."""
 
     try:
@@ -19,4 +19,4 @@ def data_loader_factory(storage_name: str) -> DataLoader:
     except KeyError as err:
         raise Exception(f"Data loader '{storage_name}' not supported: '{str(err)}'")
 
-    return data_loader_cls()
+    return data_loader_cls
