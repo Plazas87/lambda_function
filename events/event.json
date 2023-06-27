@@ -1,5 +1,5 @@
 {
-  "body": "{}",
+  "body": {"data": [{"temperature": "27"}, {"temperature": "31"}, {"temperature": "36"}]},
   "resource": "/hello",
   "path": "/process",
   "httpMethod": "POST",
