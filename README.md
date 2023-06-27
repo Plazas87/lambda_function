@@ -132,8 +132,10 @@ docker exec -it mongodb bash
 After that, login into the database by running:
 
 ```bash
-mongosh --username user --authenticationDatabase admin
+mongosh --username user --authenticationDatabase admin 
 ```
+As password use `password`
+
 Then follow the next steps:
 
 ```bash
