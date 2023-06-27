@@ -8,6 +8,7 @@ packages = [{include = "galeo_lambda", from="src" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pymongo = "^4.4.0"
 
 
 [tool.poetry.group.dev.dependencies]
