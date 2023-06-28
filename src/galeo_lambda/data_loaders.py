@@ -94,10 +94,6 @@ class DocumentDBDataLoader(DataLoader[str, Any]):
 
     def __enter__(self) -> None:
         """Stablish a new connection with the database."""
-        print(self._host)
-        print(int(self._port))
-        print(self._username)
-        print(self._password)
 
         self._client = MongoClient(
             host=self._host,

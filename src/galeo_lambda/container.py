@@ -12,7 +12,6 @@ class Container:
         storage_name=os.environ.get("STORAGE_NAME", "DOCUMENT_DB")
     )  # chose data loadaer using an env variable.
 
-    print(data_loader_cls)
     # build the data loader using virtual env
     data_loader = data_loader_cls(
         host=os.environ.get("MONGO_HOST", "mongodb"),

@@ -47,12 +47,10 @@ def lambda_handler(event: Dict[str, Any], context: Any):
         return response
 
     logger.info("Request validation completed.")
-    print(data)
     
     # process the data
     logger.info("Start processing the data...")
     try:
-        print(data)
         processed_data = data_processor.process(data=data)
 
     except Exception as err:
