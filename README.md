@@ -5,7 +5,7 @@
 Before messing up with the code get yourself ready with all the tooling needed, otherwise you will end up crying and pulling your hair out.
 
 1. Python ^3.10
-2. [Poetry](https://python-poetry.org) or whatever tool to manage virtual environments
+2. [Poetry](https://python-poetry.org) (I wrote something about this in Medium - [Python virtual environments, Poetry](https://bit.ly/venv-poetry)) or whatever tool to manage virtual environments
 3. pymongo
 
 __Tip__: If you need to manage different python versions, I would recommend you to use [pyenv](https://github.com/pyenv/pyenv) 
